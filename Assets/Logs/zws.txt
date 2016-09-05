@@ -1,35 +1,193 @@
-2016-07-01 16:08:38  Info   :  <color=#00ff00ff>资源加载模式为 LoadMainAssetAtPath</color>
-2016-07-01 16:08:38  Info   :  正在加载配置表 : Config/Entity
-2016-07-01 16:08:38  Info   :  正在加载配置表 : Config/Skill
-2016-07-01 16:08:38  Info   :  正在加载配置表 : Config/Buff
-2016-07-01 16:08:38  Info   :  正在加载配置表 : Config/Map
-2016-07-01 16:08:38  Info   :  配置表加载完成
-2016-07-01 16:08:39  Info   :  切换武器成功 : am_Bow
-2016-07-01 16:08:39  Info   :  CtrlManager.InitCtrlList
-2016-07-01 16:08:39  Info   :  TestCtrl.New
-2016-07-01 16:08:39  Info   :  CreatePanel === > TestPanel  TestPanel (UnityEngine.GameObject)
-2016-07-01 16:08:42  Info   :  切换武器成功 : am_Bow
-2016-07-01 16:09:25  Info   :  切换武器成功 : am_Bow
-2016-07-01 16:10:01  Info   :  bo_TG0005(Clone) 被销毁
-2016-07-01 16:10:01  Info   :  bo_TG0001(Clone) 被销毁
-2016-07-01 16:10:01  Info   :  bo_TG0001(Clone) 被销毁
-2016-07-01 16:10:01  Info   :  fx_Attack_Bow_a(Clone) 被销毁
-2016-07-01 16:10:01  Info   :  fx_Attack_Bow_a(Clone) 被销毁
-2016-07-01 16:10:01  Info   :  fx_Attack_Bow_a(Clone) 被销毁
-2016-07-01 16:10:01  Info   :  fx_Attack_Bow_a(Clone) 被销毁
-2016-07-01 16:10:01  Info   :  fx_Skill01(Clone) 被销毁
-2016-07-01 16:10:01  Info   :  fx_Skill01(Clone) 被销毁
-2016-07-01 16:10:01  Info   :  fx_Skill01(Clone) 被销毁
-2016-07-01 16:10:01  Info   :  fx_Skill02(Clone) 被销毁
-2016-07-01 16:10:01  Info   :  fx_Skill02(Clone) 被销毁
-2016-07-01 16:10:01  Info   :  fx_Skill03(Clone) 被销毁
-2016-07-01 16:10:01  Info   :  fx_Skill03(Clone) 被销毁
-2016-07-01 16:10:01  Info   :  fx_Arrow01(Clone) 被销毁
-2016-07-01 16:10:01  Info   :  fx_Arrow01(Clone) 被销毁
-2016-07-01 16:10:01  Info   :  fx_Arrow01(Clone) 被销毁
-2016-07-01 16:10:01  Info   :  fx_Arrow01(Clone) 被销毁
-2016-07-01 16:10:01  Info   :  fx_Attack_Bow_c(Clone) 被销毁
-2016-07-01 16:10:01  Info   :  fx_Attack_Bow_c(Clone) 被销毁
-2016-07-01 16:10:01  Info   :  fx_Hitted(Clone) 被销毁
-2016-07-01 16:10:01  Info   :  fx_Hitted(Clone) 被销毁
-2016-07-01 16:10:01  Info   :  application quit.
+2016-08-31 18:01:31  Info   :  <color=#00ff00ff>资源加载模式为 LoadMainAssetAtPath</color>
+2016-08-31 18:01:31  Info   :  正在加载配置表 : Config/Entity
+2016-08-31 18:01:31  Info   :  正在加载配置表 : Config/Skill
+2016-08-31 18:01:31  Info   :  正在加载配置表 : Config/Buff
+2016-08-31 18:01:31  Info   :  正在加载配置表 : Config/Map
+2016-08-31 18:01:31  Info   :  配置表加载完成
+2016-08-31 18:01:32  Info   :  切换武器成功 : am_Bow
+2016-08-31 18:01:32  Info   :  CtrlManager.InitCtrlList
+2016-08-31 18:01:32  Info   :  TestCtrl.New
+2016-08-31 18:01:32  Info   :  <color=#00ffffff>正在加载lua文件 ---> </color> View/TestPanel
+2016-08-31 18:01:32  Info   :  CreatePanel === > TestPanel  TestPanel (UnityEngine.GameObject)
+2016-08-31 18:01:33  Info   :  切换武器成功 : am_Bow
+2016-08-31 18:01:41  Info   :  切换武器成功 : am_Bow
+2016-08-31 18:01:42  Info   :  切换武器成功 : am_Bow
+2016-08-31 18:01:49  Info   :  切换武器成功 : am_Bow
+2016-08-31 18:01:51  Info   :  切换武器成功 : am_Bow
+2016-08-31 18:02:09  Info   :  切换武器成功 : am_Bow
+2016-08-31 18:02:10  Info   :  切换武器成功 : am_Bow
+2016-08-31 18:02:10  Info   :  切换武器成功 : am_Bow
+2016-08-31 18:02:11  Info   :  切换武器成功 : am_Bow
+2016-08-31 18:02:11  Info   :  切换武器成功 : am_Bow
+2016-08-31 18:02:12  Info   :  切换武器成功 : am_Bow
+2016-08-31 18:02:13  Info   :  切换武器成功 : am_Bow
+2016-08-31 18:02:26  Info   :  切换武器成功 : am_Bow
+2016-08-31 18:02:27  Info   :  切换武器成功 : am_Bow
+2016-08-31 18:02:28  Info   :  切换武器成功 : am_Bow
+2016-08-31 18:02:29  Info   :  切换武器成功 : am_Bow
+2016-08-31 18:02:29  Info   :  切换武器成功 : am_Bow
+2016-08-31 18:02:30  Info   :  切换武器成功 : am_Bow
+2016-08-31 18:02:31  Info   :  切换武器成功 : am_Bow
+2016-08-31 18:02:32  Info   :  切换武器成功 : am_Bow
+2016-08-31 18:03:23  Info   :  切换武器成功 : am_Bow
+2016-08-31 18:57:58  Info   :  bo_TG0005(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  bo_TG0001(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  bo_TG0001(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  bo_TG0001(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  bo_TG0001(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  bo_TG0001(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  bo_TG0001(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  bo_TG0001(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  bo_TG0001(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  bo_TG0001(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  bo_TG0001(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  bo_TG0001(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Attack_Bow_a(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Attack_Bow_a(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Attack_Bow_a(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Attack_Bow_a(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Attack_Bow_a(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Attack_Bow_a(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Attack_Bow_a(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Attack_Bow_a(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Attack_Bow_a(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Attack_Bow_a(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Attack_Bow_a(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Attack_Bow_a(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Attack_Bow_a(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Attack_Bow_a(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Attack_Bow_a(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Attack_Bow_a(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Attack_Bow_a(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Attack_Bow_a(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Attack_Bow_a(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Attack_Bow_a(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Attack_Bow_a(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Attack_Bow_a(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Attack_Bow_a(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Attack_Bow_a(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Attack_Bow_a(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Attack_Bow_a(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Attack_Bow_a(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Attack_Bow_a(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Skill01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Skill01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Skill01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Skill01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Skill01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Skill01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Skill01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Skill01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Skill01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Skill01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Skill01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Skill01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Skill01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Skill01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Skill02(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Skill02(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Skill02(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Skill02(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Skill02(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Skill02(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Skill02(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Skill02(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Skill02(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Skill02(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Skill02(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Arrow01(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Skill03(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Skill03(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Skill03(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Skill03(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Skill03(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Skill03(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Skill03(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Skill03(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Skill03(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Skill03(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Skill03(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Hitted(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Hitted(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Hitted(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Hitted(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Hitted(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Hitted(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Hitted(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Hitted(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Hitted(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Hitted(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Hitted(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Hitted(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Hitted(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Hitted(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Hitted(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Hitted(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Hitted(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Hitted(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Hitted(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Hitted(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Hitted(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Hitted(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Hitted(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Hitted(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Hitted(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Hitted(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Hitted(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Hitted(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Hitted(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Hitted(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Attack_Bow_c(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Attack_Bow_c(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Attack_Bow_c(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Attack_Bow_c(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Attack_Bow_c(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Attack_Bow_c(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Attack_Bow_c(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  fx_Attack_Bow_c(Clone) 被销毁
+2016-08-31 18:57:58  Info   :  application quit.

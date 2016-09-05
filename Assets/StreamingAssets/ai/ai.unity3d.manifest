@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 147428712
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 6a29e11cc21a67f4f3f5bd2df7c4bb54
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 66594b79a9ba618331f9f3cb65484d69
+HashAppended: 0
+ClassTypes:
+- Class: 114
+  Script: {fileID: 11500000, guid: b23f08d2ae4cba14087c1ed36193d82b, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+Assets:
+- Assets/Res/AI/Monster.asset
+Dependencies: []

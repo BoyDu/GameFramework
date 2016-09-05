@@ -43,7 +43,7 @@ public class SceneManager : MonoBehaviour {
             Log.Error("找不到地图配置 : " + CurSceneName);
             yield break;
         }
-        AStar.LoadPathInfo(CurMapInfo.pathInfo);
+        //AStar.LoadPathInfo(CurMapInfo.pathInfo);
         char[] sp = { '*' };
         string[] str = CurMapInfo.bornPos.Split(sp, System.StringSplitOptions.RemoveEmptyEntries);
 
@@ -57,8 +57,8 @@ public class SceneManager : MonoBehaviour {
         float z = System.Convert.ToSingle(str[2]);
         float angle = System.Convert.ToSingle(str[3]);
 
-        GameManager.MainPlayer = EntityManager.Instance.Get(10, 1);
-        GameManager.MainPlayer.Camp = eCamp.Hero;
+        GameManager.MainPlayer = EntityManager.Instance.Get(10, 1,eCamp.Hero);
+        GameManager.MainPlayer.UseAI = false;
         GameManager.MainPlayer.invincible = true;
         GameManager.MainPlayer.Pos = new Vector3(x, y, z);
         GameManager.MainPlayer.SetRot(angle);

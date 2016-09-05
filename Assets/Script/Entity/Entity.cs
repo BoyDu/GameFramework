@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
-using BehaviorDesigner.Runtime;
+
 public enum eEntityEvent
 {
     OnAlive,
@@ -18,13 +18,6 @@ public enum eCamp
     Boss = 11,
 }
 
-public enum eAICmd
-{
-    Null,
-    Idle,
-    Move,
-    Attack,
-}
 
 public class Entity : EntityBase
 {
@@ -38,6 +31,7 @@ public class Entity : EntityBase
     public BuffModule Buff { get; private set; }
 
     public RenderModule Render { get; private set; }
+    public AIModule AI { get; private set; }
 
     List<ModuleBase> _moduleList = null;
 
@@ -55,12 +49,15 @@ public class Entity : EntityBase
     }
 
     public bool invincible = false;
-    public eAICmd AICmd = eAICmd.Idle;
+
     public bool IsDead { get { return Property.HP <= 0; } }
 
+    public bool UseAI = true;
+
+    public Blackboard blackboard;
     //此构造函数主要用于加载角色
     //param : 角色配置表的key值
-    public Entity(uint configID,ulong uID) 
+    public Entity(uint configID,ulong uID,eCamp camp) 
     {
         //注意顺序，首先应该加载 gameobject，然后实例化其他模块，因为其他模块的构造会依赖于这个gameobject
         EntityCfg = CSVManager.GetEntityCfg(configID);
@@ -77,9 +74,11 @@ public class Entity : EntityBase
         m_object = GameObject.Instantiate(o);
         m_object.transform.SetParent(EntityManager.Instance.EntityRoot);
         UID = uID;
+        this.Camp = camp;
         FillMapBones(); //映射骨骼信息
+        blackboard = new Blackboard();
         InitModules();
-        
+       
     }
     void InitModules()
     {      
@@ -91,7 +90,7 @@ public class Entity : EntityBase
         Property = new PropertyModule(this);    //属性模块
         Buff = new BuffModule(this);            //Buff 模块       
         Render = new RenderModule(this);      //渲染模块    
-   
+        AI = new AIModule(this);
         _moduleList = new List<ModuleBase>()
         { 
             Anim, 
@@ -100,7 +99,8 @@ public class Entity : EntityBase
             Hud,
             Property,
             Buff,
-            Render
+            Render,
+            AI
         };
     }
 
@@ -156,34 +156,7 @@ public class Entity : EntityBase
         DeadTime = Time.time;
     }
     public float DeadTime = 0f;
-    private BehaviorTree bt = null;
-    public void SetAI(string aiName)
-    {
-
-         ExternalBehavior behaviour = ResManager.Load<BehaviorDesigner.Runtime.ExternalBehavior>("AI/" + aiName, ".asset");
-         if (behaviour != null)
-        {
-            EntityAI ai = m_object.GetComponent<EntityAI>();
-             if(ai == null)
-                ai = m_object.AddComponent<EntityAI>();
-            ai.entity = this;
-            bt = m_object.GetComponent<BehaviorTree>();
-             if(bt == null)
-                bt = m_object.AddComponent<BehaviorTree>();
-            bt.ExternalBehavior = behaviour;
-            bt.RestartWhenComplete = true;
-            AICmd = eAICmd.Idle;
-        }
-        else
-        {
-            Log.Error("加载AI失败 ： " + aiName);
-        }
-    }
-
-    public void EnableAI(bool enable = true)
-    {
-        bt.enabled = enable;
-    }
+    
 
     public bool IsEnemy(Entity ent)
     {

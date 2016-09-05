@@ -1,5 +1,5 @@
 //此代码根据 Buff.csv 自动生成，不要手动修改！！！！
-//工具菜单：Export/CSV_TO_C#    生成时间 ： 6/23/2016 4:18:44 PM
+//工具菜单：Export/CSV_TO_C#    生成时间 ： 7/12/2016 2:21:33 PM
 using System;
 public class CSVBuff
 {
@@ -11,12 +11,6 @@ public class CSVBuff
 	public float Value;    //数据
 	public int KeepTime;    //存在时间(毫秒)
 	public int Time;    //作用次数
-	public int DeathToClear;    //死亡是否清除(1.清除 2.不清除）
-	public int ResultMutex;    //效果互斥（此BUFF在 互斥表的BUFF释放无效）
-	public int OverlayMode;    //效果清除（此BUFF可清除效果表里的BUFF）
-	public int Buffhandle;    //一种buff标志(同种buff相同 不同种不同)
-	public int BuffLevel;    //buff等级
-	public string Icon;    //图标
 	public string EffectName;    //特效
 	public string BindBone;    //特效绑定骨骼
 	public string Name;    //buff名称

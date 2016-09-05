@@ -10,17 +10,25 @@ public class Test : MonoBehaviour {
 
     bool moving = false;
     int pathIndex = 0;
-    float speed = 30f;
+    float speed = 20f;
+    Seeker m_seeker = null;
 	// Use this for initialization
 	void Start () {
-        AStar.LoadPathInfo("PathInfo/test");
+        m_seeker = gameObject.AddComponent<Seeker>();
 	}
 
     void Update()
     {
         if (moving)
         {
-            Util.DrawPathLine(m_pathList);
+            //Util.DrawPathLine(m_pathList);
+
+            if (pathIndex >= m_pathList.Count)
+            {
+                Debug.Log("pathindex = " + pathIndex + "   count = " + m_pathList.Count);
+                Stop();
+                return;
+            }
 
             Vector3 dir = m_pathList[pathIndex] - start.position;
             start.position += dir * speed * Time.deltaTime;
@@ -29,10 +37,7 @@ public class Test : MonoBehaviour {
             {
                 pathIndex++;
             }
-            if(pathIndex >= m_pathList.Count)
-            {
-                Stop();
-            }
+            
 
             
         }
@@ -43,9 +48,26 @@ public class Test : MonoBehaviour {
         if(GUI.Button(new Rect(0,100,100,50),"寻路"))
         {
             Stop();
-            m_pathList = AStar.FindPath(start.position, end.position);
-            moving = (m_pathList != null && m_pathList.Count > 0);
-            
+//             m_pathList = AStar.FindPath(start.position, end.position);
+//             moving = (m_pathList != null && m_pathList.Count > 0);
+
+          m_seeker.StartPath(start.position, end.position,FindPathComplete);
+           
+        }
+    }
+
+    void FindPathComplete(Pathfinding.Path p)
+    {
+        if (!p.error)
+        {
+            m_pathList = p.vectorPath;
+            moving = true;
+            Debug.Log("error : " + p.vectorPath.Count);
+        }
+        else
+        {
+            Debug.Log("right : " + p.vectorPath.Count);
+            moving = false;
         }
     }
 

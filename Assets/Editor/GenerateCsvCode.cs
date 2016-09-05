@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Text;
 public class GenerateCsvCode
 {
-     static string configPath = Application.dataPath + "/Resources/Config/";
+     static string configPath = Application.dataPath + "/Res/Config/";
      static string csvScriptPath = Application.dataPath + "/Script/CSV/Generate/";
     static char[] sp = { ',' };
 

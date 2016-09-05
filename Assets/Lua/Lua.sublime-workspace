@@ -1,0 +1,353 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"regis",
+				"registerProtobuf"
+			],
+			[
+				"data",
+				"dataPath"
+			],
+			[
+				"func",
+				"function	function"
+			],
+			[
+				"addr",
+				"addressbook"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Main.lua",
+			"settings":
+			{
+				"buffer_size": 1712,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "CtrlManager.lua",
+			"settings":
+			{
+				"buffer_size": 830,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 380.0,
+		"last_filter": "pcip",
+		"selected_items":
+		[
+			[
+				"pcip",
+				"Package Control: Install Package"
+			],
+			[
+				"pcip ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/E/godfight/GameFramework/Assets/Lua",
+		"/E/godfight/GameFramework/Assets/Lua/pbc"
+	],
+	"file_history":
+	[
+		"/C/Users/huanqing.she/AppData/Roaming/Sublime Text 3/Packages/GoSublime/CHANGELOG.md",
+		"/E/godfight/GameFramework/Assets/Lua/pbc/protobuf.lua",
+		"/C/Users/huanqing.she/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/E/godfight/GameFramework/Assets/Lua/test.lua",
+		"/E/godfight/GameFramework/Assets/Lua/pbc/testparser.lua",
+		"/E/godfight/GameFramework/Assets/Lua/pbc/test2.lua",
+		"/E/godfight/GameFramework/Assets/Lua/pbc/test.lua",
+		"/C/Users/huanqing.she/Desktop/LuaFramework_UGUI-master/Assets/LuaFramework/Lua/Common/functions.lua",
+		"/C/Users/huanqing.she/Desktop/LuaFramework_UGUI-master/Assets/LuaFramework/Lua/Controller/PromptCtrl.lua",
+		"/C/Users/huanqing.she/Desktop/LuaFramework_UGUI-master/Assets/LuaFramework/Lua/3rd/pblua/login_pb.lua",
+		"/C/Users/huanqing.she/Desktop/LuaFramework_UGUI-master/Assets/LuaFramework/Lua/3rd/pblua/login.proto",
+		"/C/Users/huanqing.she/Desktop/LuaFramework_UGUI-master/Assets/LuaFramework/Lua/Common/protocal.lua",
+		"/C/Users/huanqing.she/Desktop/LuaFramework_UGUI-master/Assets/LuaFramework/Lua/Logic/Network.lua",
+		"/C/Users/huanqing.she/Desktop/LuaFramework_UGUI-master/Assets/LuaFramework/Lua/Logic/CtrlManager.lua",
+		"/C/Users/huanqing.she/Desktop/LuaFramework_UGUI-master/Assets/LuaFramework/Lua/Logic/Game.lua",
+		"/C/Users/huanqing.she/Desktop/LuaFramework_UGUI-master/Assets/LuaFramework/Lua/Common/define.lua",
+		"/C/Users/huanqing.she/Desktop/LuaFramework_UGUI-master/Assets/LuaFramework/Lua/Controller/MessageCtrl.lua",
+		"/C/Users/huanqing.she/Desktop/LuaFramework_UGUI-master/Assets/LuaFramework/Lua/Logic/LuaClass.lua",
+		"/C/Users/huanqing.she/Desktop/LuaFramework_UGUI-master/Assets/LuaFramework/Lua/View/MessagePanel.lua",
+		"/C/Users/huanqing.she/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/E/mygo/hello.go",
+		"/C/Users/huanqing.she/AppData/Roaming/Sublime Text 3/Packages/GoSublime/USAGE.md"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"<open folders>,<open files>",
+			"<open folders>",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"folder_exclude_patterns",
+			"ParseFromString",
+			"SerializeToString",
+			"sproto",
+			"SerializeToString",
+			"CtrlManager.Init",
+			"OnCallLuaFunc",
+			"ParseFromString",
+			"OnCallLuaFunc",
+			"ByteBuffer",
+			"Log",
+			"CreatePanel",
+			"OnMessage",
+			"TestLoginPblua",
+			"ParseFromString",
+			"SerializeToString",
+			"SendMessage",
+			"Network.OnConnect",
+			"OnSocket",
+			"Event.Brocast",
+			"Network.Start",
+			"PanelNames",
+			"OnInitOK",
+			"LoginRequest",
+			"login_pb",
+			"New",
+			"Awake",
+			"PromptPanel",
+			"destroy",
+			"Awake",
+			"Init",
+			"GetCtrl",
+			"MessageCtrl",
+			"LuaClass",
+			":Awake()",
+			"CtrlManager",
+			"PromptCtrl.Awake"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Main.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1712,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								769,
+								769
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 225.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "CtrlManager.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 830,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								830,
+								830
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Lua/Lua.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 315.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.9o://E:\\mygo":
+	{
+		"height": 100.0
+	},
+	"output.GoSublime-main-output":
+	{
+		"height": 100.0
+	},
+	"output.GoSublime-output":
+	{
+		"height": 100.0
+	},
+	"output.MarGo-output":
+	{
+		"height": 100.0
+	},
+	"output.exec":
+	{
+		"height": 173.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/Lua/Lua.sublime-build",
+	"project": "Lua.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 220.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

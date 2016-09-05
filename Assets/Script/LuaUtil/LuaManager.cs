@@ -61,6 +61,7 @@ using LuaInterface;
             lua.OpenLibs(LuaDLL.luaopen_cjson_safe);
             lua.OpenLibs(LuaDLL.luaopen_bit);
             lua.OpenLibs(LuaDLL.luaopen_socket_core);
+            lua.OpenLibs(LuaDLL.luaopen_protobuf_c);
         }
 
         /// <summary>

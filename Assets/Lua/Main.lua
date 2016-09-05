@@ -1,6 +1,6 @@
 require "Define"
 require "CtrlManager"
-
+require "pbc/protobuf"
 
 --主入口函数。从这里开始lua逻辑
 function Main()					
@@ -8,9 +8,10 @@ function Main()
 
     -- ResisterNetEvent(1,"Main","Main")
     -- TestSend()
+    registerProtobuf("addressbook.pb")
 
     CtrlManager.InitCtrlList()
-    CtrlManager.InitViewPanels()
+    --CtrlManager.InitViewPanels()
 
     
     local ctrl = CtrlManager.GetCtrl(CtrlNames.Test)
@@ -18,6 +19,7 @@ function Main()
         ctrl.Awake()
     end
     
+    pbc()
 end
 
 --场景切换通知
@@ -40,4 +42,50 @@ end
 --  发送网络消息的总接口   参数ByteBuffer
 function SendMessage(args)
     NetMgr:SendMessage(args)
+end
+
+
+--注册pb文件 
+function  registerProtobuf(filename)
+    print("正在注册pb文件 ： " .. filename)
+
+    local addr = io.open(UnityEngine.Application.dataPath .. "/Lua/pbc/"..filename,"rb")
+    local buffer = addr:read "*a"
+    addr:close()
+    protobuf.register(buffer)
+end
+
+
+--序列化测试
+function pbc()
+
+    local addressbook = 
+    {
+        name = "Alice",
+        id = 12345,
+        phone = 
+        {
+            {number = "11111"},
+            {number = "22222",type = "WORK"},
+        }
+    }
+
+    local code = protobuf.encode("tutorial.Person",addressbook)
+    local buffer = ByteBuffer.New()
+    buffer:WriteBuffer(code)
+    SendMessage(buffer)
+
+    OnPbc(code)
+end
+
+--反序列化测试
+function OnPbc(data)
+
+    local decode = protobuf.decode("tutorial.Person",data)
+
+    print(decode.name)
+    print(decode.id)
+    for k,v in ipairs(decode.phone) do
+        print("\t"..v.number,v.type)
+    end
 end

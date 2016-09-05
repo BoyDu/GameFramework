@@ -92,7 +92,14 @@ public class LuaNetCallback
         /// </summary>
         public void SendMessage(ByteBuffer buffer)
         {
-            SocketClient.SendMessage(buffer);
+            byte[] data = buffer.ToBytes();
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            foreach (var d in data)
+            {
+                sb.Append(Convert.ToString(d,16));
+            }
+            Debug.Log(sb.ToString());
+            //SocketClient.SendMessage(buffer);
         }
 
         /// <summary>

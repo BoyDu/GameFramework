@@ -13,6 +13,9 @@ using UnityEngine.UI;
 
         protected void Awake()
         {
+            string luaFile = string.Concat("View/",name);
+            Log.Info("<color=#00ffffff>正在加载lua文件 ---> </color> " + luaFile);
+            LuaManager.Instance.DoFile(luaFile);
             Util.CallMethod(name, "Awake", gameObject);
         }
 

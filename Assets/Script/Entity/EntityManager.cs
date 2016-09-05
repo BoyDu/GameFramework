@@ -22,19 +22,21 @@ public class EntityManager : Singleton<EntityManager>
             return root.transform;
         }
     }
-    public  Entity Get(uint configID,ulong uID)
+    public  Entity Get(uint configID,ulong uID,eCamp camp)
     {
         if(!m_dicObject.ContainsKey(uID))
         {
-            Entity ent = GetFromPool(configID, uID);
+            Entity ent = GetFromPool(configID, uID,camp);
             ent.IsActive = true;
             m_dicObject.Add(uID, ent);
+            ent.Camp = camp;
             return ent;
         }
+        m_dicObject[uID].Camp = camp;
         return m_dicObject[uID];
     }
 
-    private Entity GetFromPool(uint configID,ulong uID)
+    private Entity GetFromPool(uint configID,ulong uID,eCamp camp)
     {
         HashSet<Entity> hash = null;
         if(!m_dicObjectPool.TryGetValue(configID,out hash))
@@ -48,12 +50,13 @@ public class EntityManager : Singleton<EntityManager>
         {
             ent = e.Current;
             ent.UID = uID;
+            ent.Camp = camp;
             ent.Alive();
             hash.Remove(ent);
         }
         else
         {
-            ent = new Entity(configID, uID);
+            ent = new Entity(configID, uID,camp);
         }
         return ent;
     }

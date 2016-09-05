@@ -135,7 +135,8 @@ public class SkillProcesser
     public static void CalcBlood(Entity caster,Entity target,CSVSkill skillInfo)
     {
         if (target == null) return;
-        //target.Buff.AddBuff((int)skillInfo.attackBuff);
+        if(skillInfo.attackBuff != 0)
+            target.Buff.AddBuff((int)skillInfo.attackBuff);
         bool isCrit = false;
         int damage = GetDamage(caster, target, skillInfo, out isCrit);
 

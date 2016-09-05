@@ -264,6 +264,7 @@ public class Util {
     
     public static void DrawPathLine(List<Vector3> pathList)
     {
+        return;
         if (pathList == null)
             return;
         for (int i = 0; i < pathList.Count - 1; i++)

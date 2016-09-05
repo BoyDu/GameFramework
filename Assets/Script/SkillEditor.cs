@@ -98,13 +98,13 @@ public class SkillEditor : MonoBehaviour
     void LoadHero()
     {
         HeroConfigID = Convert.ToUInt32(HeroConfig.text);
-        MainPlayer = EntityManager.Instance.Get(HeroConfigID, 1);
+        MainPlayer = EntityManager.Instance.Get(HeroConfigID, 1,eCamp.Hero);
         if(MainPlayer == null)
         {
             Debug.LogError("加载英雄失败！ configID = " + HeroConfigID);
             return;
         }
-        MainPlayer.Camp = eCamp.Hero;
+
         MainPlayer.Pos = new Vector3(28.5f, 4.6f, 45f);
         CameraController.Instance.LookTarget = MainPlayer;
         GameManager.MainPlayer = MainPlayer;
@@ -114,9 +114,8 @@ public class SkillEditor : MonoBehaviour
 
     void LoadEnemy()
     {
-        Entity enemy = EntityManager.Instance.Get(HeroConfigID, 2);
+        Entity enemy = EntityManager.Instance.Get(HeroConfigID, 2,eCamp.Enemy);
         enemy.Pos = new Vector3(25f, 4.6f, 42f);
-        enemy.Camp = eCamp.Enemy;
     }
 
     void LoadSkillConfig()

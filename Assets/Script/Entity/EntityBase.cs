@@ -47,7 +47,7 @@ public abstract class EntityBase  {
 
     public void SetRot(float angle)
     {
-        m_object.transform.rotation = Quaternion.EulerAngles(0f, angle, 0f);
+        m_object.transform.rotation = Quaternion.Euler(0f, angle, 0f);
     }
 
     public GameObject GetGameObject() { return m_object; }

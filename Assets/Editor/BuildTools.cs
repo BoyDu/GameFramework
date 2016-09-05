@@ -50,12 +50,12 @@ public class BuildTools
 
         abBuildList.Clear();
         //打包
+        BuildAI();
         BuildLua();
         BuildRes();
         BuildConfig();
         BuildPathInfo();
-        BuildAssetBundleOptions options = BuildAssetBundleOptions.DeterministicAssetBundle |
-            BuildAssetBundleOptions.UncompressedAssetBundle;
+        BuildAssetBundleOptions options = BuildAssetBundleOptions.DeterministicAssetBundle /*| BuildAssetBundleOptions.UncompressedAssetBundle*/;
         BuildPipeline.BuildAssetBundles(streamPath, abBuildList.ToArray(), options, target);
         GenMD5File();
 
@@ -69,7 +69,20 @@ public class BuildTools
         AssetDatabase.Refresh();
         Debug.Log("打包完成");
     }
-
+    static void BuildAI()
+    {
+        string AIPath = Application.dataPath + "/Res/AI/";
+        string[] files = Directory.GetFiles(AIPath, "*.asset");
+        for(var i = 0; i < files.Length;i++)
+        {
+            files[i] = "Assets" + files[i].Replace(Application.dataPath, string.Empty);
+        }
+        AssetBundleBuild build = new AssetBundleBuild();
+        build.assetBundleName = "AI/AI.unity3d";
+        build.assetNames = files;
+        abBuildList.Add(build);
+        Debug.Log("abName : AI/AI.unity3d 资源路径 : Assets/Res/AI");
+    }
     static void BuildConfig()
     {
         string cfgPath = Application.dataPath + "/Res/Config/";

@@ -52,9 +52,9 @@ public class BuffModule : ModuleBase
         m_removeBuffList.Clear();
     }
 
-    public void AddBuff(int buffID)
+    public void AddBuff(int buffID,Entity caster = null)
     {
-        BuffBase buff = BuffManager.CreateBuff(buffID,m_entity);
+        BuffBase buff = BuffManager.GetBuff(buffID,m_entity,caster);
         if(buff == null)
         {
             Log.Error("找不到buffID = " + buffID);
@@ -83,6 +83,7 @@ public class BuffModule : ModuleBase
             return;
         buff.BuffEnd();
         m_dicBuff.Remove(buffID);
+        BuffManager.PushToPool(buff);
     }
 
     public void RemoveAllBuff()

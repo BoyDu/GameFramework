@@ -13,12 +13,19 @@ public class MoveModule : ModuleBase {
     Vector3 m_MoveDir = Vector3.zero;
 
     Vector3 _faceDir = Vector3.zero;
-
+    Seeker m_seeker = null;
     
 
 	public MoveModule(Entity entity) : base(entity)
-    {
-        
+    {    
+        if(GameDefine.UseAstar)
+        {
+            m_seeker = m_object.GetComponent<Seeker>();
+            if (m_seeker == null)
+            {
+                m_seeker = m_object.AddComponent<Seeker>();
+            }
+        }
     }
 
     bool _isInit = false;
@@ -40,12 +47,19 @@ public class MoveModule : ModuleBase {
                     m_navAgent = m_object.AddComponent<NavMeshAgent>();
                 }
             }
-            _isInit = true;
+            else
+            {
+                
+                _isInit = true;
+            }
         }
     }
 
+    Vector3 lastDes = Vector3.zero;
     public void MoveTo(Vector3 des)
     {
+        if ((lastDes - des).sqrMagnitude < 0.4f)
+            return;
 
         if ((m_object.transform.position - des).sqrMagnitude < 0.1f)
             return;
@@ -54,22 +68,23 @@ public class MoveModule : ModuleBase {
         if (m_entity.Skill.m_bIsCasting)
             return;
 
+        lastDes = des;
+
         if (GameDefine.UseAstar)
         {
-
-            m_pathList = AStar.FindPath(m_entity.Pos, des);
-            if (m_pathList != null && m_pathList.Count > 0)
-            {
-                m_entity.Pos = m_pathList[0];
-                m_curStep = 0;
-                m_isMoving = true;
-                OnMoveToNextPos();
-                m_entity.Anim.SyncAction("Run");
-            }
-            else
-            {
-                m_isMoving = false;
-            }
+            m_seeker.StartPath(m_entity.Pos, des, FindPathComplete);
+//             m_pathList = AStar.FindPath(m_entity.Pos, des);
+//             if (m_pathList != null && m_pathList.Count > 0)
+//             {
+//                 m_entity.Pos = m_pathList[0];
+//                 m_curStep = 0;
+//                 m_isMoving = true;
+//                 OnMoveToNextPos();
+//                 m_entity.Anim.SyncAction("Run");
+//             }
+//             else
+//             {
+//                 m_isMoving = false;
         }
         else
         {
@@ -79,6 +94,7 @@ public class MoveModule : ModuleBase {
                 m_navPath = new NavMeshPath();
 
             m_navAgent.CalculatePath(des, m_navPath);
+           
             if (m_navPath.corners.Length > 0)
             {
                 m_pathList.Clear();
@@ -88,6 +104,24 @@ public class MoveModule : ModuleBase {
                 OnMoveToNextPos();
                 m_entity.Anim.SyncAction("Run");
             }
+        }
+    }
+
+    void FindPathComplete(Pathfinding.Path path)
+    {
+       
+        if (!path.error)
+        {
+            m_pathList = path.vectorPath;
+            m_entity.Pos = m_pathList[0];
+            m_curStep = 0;
+            m_isMoving = true;
+            OnMoveToNextPos();
+            m_entity.Anim.SyncAction("Run");
+        }
+        else
+        {
+            m_isMoving = false;
         }
     }
 
@@ -147,6 +181,7 @@ public class MoveModule : ModuleBase {
     {
         m_curStep = 0;
         m_isMoving = false;
+        m_navAgent.Stop();
         if (PlayIdle)
             m_entity.Anim.SyncAction("Idle_Sword");
     }

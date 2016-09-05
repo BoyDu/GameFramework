@@ -26,12 +26,28 @@ public class CameraController : MonoBehaviour {
 	
 	}
 
+    uint id = 1000;
+
     void Update()
     {
+
 //         if (GameManager.MainPlayer != null && InputUtil.has_touch_down())
-//         {
-//             CheckClickMove();
-//        
+//             CheckClickMove();   
+#if UNITY_EDITOR
+         
+        if(Input.GetMouseButtonDown(1))
+        {
+            uint configID = 11;
+
+            Entity enemy = EntityManager.Instance.Get(configID, id++,eCamp.Enemy);
+
+            Ray r = Camera.main.ScreenPointToRay(InputUtil.get_touch_pos());
+            RaycastHit hitInfo;
+            if (!Physics.Raycast(r, out hitInfo, 100f, ~LayerMask.NameToLayer("Ground")))
+                return;
+            enemy.Pos = hitInfo.point;
+        }
+#endif
     }
 
     //检测点击移动角色
@@ -42,6 +58,7 @@ public class CameraController : MonoBehaviour {
         if (!Physics.Raycast(r, out hitInfo, 100f, ~LayerMask.NameToLayer("Ground")))
             return;
 
+        
         GameManager.MainPlayer.Move.MoveTo(hitInfo.point);
     }
 

@@ -15,7 +15,7 @@ public class AnimationModule : ModuleBase
     {
         if(m_animator == null)
             m_animator = m_object.GetComponent<Animator>();
-        SyncAction("Idle_Sword");
+        //SyncAction("Idle_Sword");
     }
      
     public AnimatorStateInfo GetCurAnimatorState()
